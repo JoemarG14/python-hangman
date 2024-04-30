@@ -1,5 +1,5 @@
 import random
-from replit import clear
+import os
 import words as HW
 import art as HA
 
@@ -9,6 +9,7 @@ guess = ""
 health = 6
 isCorrect = False
 isRepeated = False
+cls = lambda: os.system('cls')
 
 def print_word(word):
   print("Hidden Word: " + " ".join(word))
@@ -18,7 +19,7 @@ def printGuess():
     global health
     global guess
     
-    clear()
+    cls()
 
     text = ''
     # Print the value of guess_word
